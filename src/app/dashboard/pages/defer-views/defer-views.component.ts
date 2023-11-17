@@ -8,6 +8,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './defer-views.component.html',
   styles: ``
 })
-export class DeferViewsComponent {
+export default class DeferViewsComponent {
 
 }
