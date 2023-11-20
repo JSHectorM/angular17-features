@@ -42,12 +42,17 @@ export const routes: Routes = [
           },
           {
             path:'', redirectTo: 'control-flow', pathMatch: 'full',
-          }
+          },
         ]
       },
       {
         path: '',
         redirectTo: '/dashboard',
         pathMatch: 'full'
-      }
+      },
+      {
+        path: '**',
+        title: 'Page Not Found',
+        loadComponent: () => import('./shared/page-404/page-404.component'),
+      },
 ];
