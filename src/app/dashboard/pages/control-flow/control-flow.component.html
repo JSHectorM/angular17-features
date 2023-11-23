@@ -1,1 +1,28 @@
-<p>control-flow works!</p>
+<section class="grid grid-cols-1 md:grid-cols-2 gap-3">
+    <div class="bg-white rounded shadow p-10">
+        <h2 class="text-2xl font-bold mb-5">
+            if: {{showContent()}}
+        </h2>
+
+        <button (click)="toggleContent()" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm 
+        font-semibold text-white shadow-sm hover:bg-indigo-500 
+        focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
+         focus-visible:outline-indigo-600" type="button">
+            Click me!
+        </button>
+
+        @if ( showContent() ) {
+            <p> 
+                La Signal es <span class="text-xl font-bold">{{ showContent() }}</span>
+                <br>
+                Entro al control de flujo <span class="text-xl">if</span>
+            </p>
+        }@else {
+            <p>
+                Entro al control de flujo <span class="text-xl font-bold">else</span>
+                ********
+            </p>
+        }
+
+    </div>
+</section>
