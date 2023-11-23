@@ -32,6 +32,12 @@
                 <span class="text-sm text-white/50 hidden md:block">{{item.path}}</span>
             </div>
         </a>
+        } @empty {
+            <div class="flex flex-col">
+                <span class="text-lg font-bold leading-5 text-white">
+                    No se obtuvieron las opciones del menú.
+                </span>    
+            </div>
         }
     </div>
 </div>
